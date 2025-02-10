@@ -53,8 +53,8 @@ const Header = () => {
 
         <div className="header-actions">
           <select className="language-selector">
-            <option value="tr">TR</option>
-            <option value="en">EN</option>
+            <option value="tr">tr</option>
+            <option value="en">en</option>
           </select>
           <button className="search-button">
             <FaSearch />
