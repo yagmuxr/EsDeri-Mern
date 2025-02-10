@@ -40,3 +40,12 @@
 .read-the-docs {
   color: #888;
 }
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  padding-top: 90px; /* Header'ın yüksekliği kadar padding ekliyoruz */
+}
