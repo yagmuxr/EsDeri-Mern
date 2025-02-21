@@ -1,0 +1,91 @@
+policy {
+    border: 1px solid #dee0ea;
+    margin-top: 40px;
+  }
+  
+  .policy .policy-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 25px 0;
+  }
+  
+  .policy .policy-list .policy-item {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+  }
+  
+  .policy .policy-item i {
+    font-size: 50px;
+    display: flex;
+  }
+  
+  .policy .policy-item .policy-texts {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .policy .policy-item .policy-texts strong {
+    font-weight: 600;
+  }
+  
+  .policy .policy-item .policy-texts span {
+    font-size: 12px;
+  }
+
+.policy-item {
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.policy-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.policy-item i {
+  font-size: 35px;
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+.policy-item:hover i {
+  transform: scale(1.1);
+  color: #ff0000;
+}
+
+.policy-texts {
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.policy-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  transition: all 0.3s ease;
+}
+
+.policy-item:hover .policy-title {
+  color: #ff0000;
+}
+
+.policy-desc {
+  font-size: 14px;
+  color: #666;
+  transition: all 0.3s ease;
+}
+
+.policy-item:hover .policy-desc {
+  color: #333;
+}

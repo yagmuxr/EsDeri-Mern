@@ -1,0 +1,145 @@
+.account-page {
+    margin: 80px 0;
+    padding: 0 15px;
+  }
+  
+  .account-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .account-column {
+    background-color: white;
+    border-radius: 25px;
+    padding: 40px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    min-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .account-column h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #000;
+  }
+  
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .form-group label {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .form-group input {
+    padding: 12px 20px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+  }
+  
+  .form-group input:focus {
+    outline: none;
+    border-color: #000;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
+  }
+  
+  .remember-me {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 10px 0;
+  }
+  
+  .remember-me input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #f00;
+  }
+  
+  .remember-me label {
+    font-size: 14px;
+    color: #666;
+    cursor: pointer;
+  }
+  
+  .submit-button {
+    padding: 14px 25px;
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 10px;
+  }
+  
+  .submit-button:hover {
+    background-color: #333;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    color: #ff0000;
+  }
+  
+  .forgot-password {
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+    text-align: center;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+  }
+  
+  .forgot-password:hover {
+    color: #000;
+    text-decoration: underline;
+  }
+  
+  .required {
+    color: #ff0000;
+  }
+  
+  /* Responsive */
+  @media screen and (max-width: 992px) {
+    .account-wrapper {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+  
+    .account-column {
+      min-width: auto;
+      width: 100%;
+      padding: 30px 20px;
+    }
+  }
+  
+  .privacy-policy {
+    margin: 20px 0;
+  }
+  
+  .privacy-policy p {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.6;
+  }
+  

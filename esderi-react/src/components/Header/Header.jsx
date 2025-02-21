@@ -18,7 +18,9 @@ const Header = () => {
                 <i className="bi bi-list" id="btn-menu"></i>
               </div>
               <div className="header-left">
-                <a href="index.html" className="logo">LOGO</a>
+                <a href="/" className="logo-link">
+                  <img src="img/esderi.jpg" alt="Esderi Logo" className="logo-img"/>
+                </a>
               </div>
               <div className="header-center" id="sidebar">
                 <nav className="navigation">

@@ -1,0 +1,185 @@
+.product-item {
+  background-color: white;
+  border-radius: 15px;
+  padding: 10px;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+.product-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.product-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  height: 250px;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s ease;
+}
+
+.product-item:hover .product-image img {
+  transform: scale(1.05);
+}
+
+.product-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 15px 0 8px;
+  color: #000;
+  transition: color 0.3s ease;
+}
+
+.product-item:hover .product-title {
+  color: #ff0000;
+}
+
+.product-price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.product-price .new-price {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ff0000;
+}
+
+.product-price .old-price {
+  font-size: 14px;
+  color: #666;
+  text-decoration: line-through;
+}
+
+.product-discount {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: #ff0000;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 13px;
+  font-weight: 500;
+  z-index: 1;
+}
+
+.product-links {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.product-item:hover .product-links {
+  opacity: 1;
+}
+
+.product-links button,
+.product-links a {
+  background-color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  color: #000;
+  text-decoration: none;
+}
+
+.product-links button:hover,
+.product-links a:hover {
+  background-color: #ff0000;
+  color: white;
+  transform: scale(1.1);
+}
+
+/* Overlay efekti için */
+.product-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.product-item:hover .product-image::before {
+  opacity: 1;
+}
+
+/* Tüm butonlar için aynı stil */
+.product-links .bi {
+  font-size: 16px;
+}
+
+/* Responsive düzen için */
+@media screen and (max-width: 768px) {
+  .product-item {
+    max-width: 240px;
+  }
+  
+  .product-image {
+    height: 220px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .product-item {
+    max-width: 200px;
+  }
+  
+  .product-image {
+    height: 200px;
+  }
+}
+
+.product-star {
+  display: flex;
+  gap: 3px;
+  justify-content: center;
+  align-items: center;
+  margin: 8px 0;
+}
+
+.product-star i {
+  font-size: 14px;
+  color: #ff0000;
+}
+
+.product-star span {
+  color: #666;
+  font-size: 13px;
+  margin-left: 5px;
+}

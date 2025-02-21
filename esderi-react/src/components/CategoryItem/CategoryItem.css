@@ -1,0 +1,115 @@
+/* Kategori öğesi düzenlemeleri */
+.category-item {
+    background-color: white;
+    border-radius: 15px;
+    padding: 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+    height: 280px; /* Yüksekliği artırdım */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; /* Öğeleri ortalamak için */
+    margin-bottom: 30px; /* Alt kısımda daha fazla boşluk */
+}
+
+/* Kategori görselleri */
+.category-item img {
+    width: 100%;
+    height: 200px; /* Resim yüksekliğini artırdım */
+    object-fit: cover;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.category-item:hover img {
+    transform: scale(1.10);
+}
+
+/* Başlık düzenlemesi */
+.category-item .category-title {
+    margin-top: 12px;
+    font-size: 16px; /* Font boyutunu biraz artırdım */
+    font-weight: 500;
+    color: #000;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 5px;
+}
+
+.category-item:hover .category-title {
+    color: #ff0000;
+}
+
+/* Kategori açıklaması */
+.category-item span {
+    display: inline-block;
+    margin-top: 5px;
+    font-size: 13px;
+    color: #666;
+}
+
+/* Overlay efekti */
+.category-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.02),
+        rgba(0, 0, 0, 0.04)
+    );
+    border-radius: 15px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.category-item:hover::before {
+    opacity: 1;
+}
+
+/* Grid düzeni için */
+.categories .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Kategorileri yatayda yayalım */
+    gap: 20px;
+    padding: 20px 0;
+}
+
+/* Kategori listesi düzeni */
+.categories .category-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Kategoriler arasındaki boşluğu artırdım */
+    justify-content: space-between; /* Kategorileri eşit şekilde yerleştirme */
+}
+
+/* Margin ayarları */
+.categories {
+    margin: 40px 0;
+}
+
+/* Mobil uyumluluk */
+@media (max-width: 768px) {
+    .category-item {
+        height: auto;
+        margin-bottom: 20px; /* Mobilde daha küçük boşluk */
+    }
+
+    .category-item img {
+        height: 150px; /* Mobilde resimleri biraz küçültüyoruz */
+    }
+
+    .categories .container {
+        justify-content: center; /* Mobilde ortalamayı sağlıyoruz */
+    }
+}
