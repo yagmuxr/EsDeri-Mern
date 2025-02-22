@@ -5,9 +5,9 @@ import Footer from "../components/Footer/Footer";
 const AuthPage = () => {
     return (    
         <>
-        <Header/>
+    
         <Auth />
-        <Footer/>
+        
         </>
     )
 }
