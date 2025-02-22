@@ -1,5 +1,9 @@
 import './Header.css';
+import { useState } from 'react';
+import Search from "../../modals/Search/Search";
+
 const Header = () => {
+    const [isSearchShow, setIsSearchShow] = useState(false);
     return (
       <header>
         <div className="global-notification">
@@ -113,7 +117,10 @@ const Header = () => {
                   <a href="account.html" className="header-account">
                     <i className="bi bi-person"></i>
                   </a>
-                  <button className="search-button">
+                  <button
+                    className="search-button"
+                    onClick={() => setIsSearchShow(true)}
+                  >
                     <i className="bi bi-search"></i>
                   </button>
                   <a href="#">
@@ -130,6 +137,7 @@ const Header = () => {
             </div>
           </div>
         </div>
+        <Search isSearchShow={isSearchShow} setIsSearchShow={setIsSearchShow} />
       </header>
     );
   };
