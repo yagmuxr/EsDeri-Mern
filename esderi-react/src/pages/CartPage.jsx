@@ -6,9 +6,9 @@ import Footer from "../components/Footer/Footer"
 const CartPage = () => {
   return (
     <Fragment>
-        <Header />
+     
         <Cart />
-        <Footer />
+      
     </Fragment>
   )
 }

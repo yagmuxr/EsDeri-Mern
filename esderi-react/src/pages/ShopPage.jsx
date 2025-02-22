@@ -6,10 +6,8 @@ import Footer from "../components/Footer/Footer";
 const ShopPage = () => {
   return (
     <>
-    <Header/>
     <Products/>
     <Policy/>
-    <Footer/>
     </>
   )
 }
