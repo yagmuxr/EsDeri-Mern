@@ -227,3 +227,10 @@
   transform: translateY(-2px);
   color: #ff0000;
 }
+/*.footer-contact-bottom:hover {
+  transform: translateY(-3px);
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  filter: brightness(1.1);
+}

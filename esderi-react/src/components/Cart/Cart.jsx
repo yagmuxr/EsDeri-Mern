@@ -1,6 +1,6 @@
 import "./Cart.css";
-import CartCoupon from "./CartCoupon";
-import CartProgress from "./CartProgress";
+import CartCoupon from "./CartCoupon.jsx";
+import CartProgress from "./CartProgress.jsx";
 import CartTable from "./CartTable";
 import CartTotals from "./CartTotals";
 

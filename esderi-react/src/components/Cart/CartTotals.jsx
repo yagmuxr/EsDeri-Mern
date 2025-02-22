@@ -16,13 +16,9 @@ const CartTotals = () => {
                 <ul>
                   <li>
                     <label>
-                      Fast Cargo: $15.00
-                      <input type="checkbox" id="fast-cargo" />
+                      $15.00
                     </label>
-                  </li>
-                  <li>
-                    <a href="#">Change Address</a>
-                  </li>
+                  </li>     
                 </ul>
               </td>
             </tr>
