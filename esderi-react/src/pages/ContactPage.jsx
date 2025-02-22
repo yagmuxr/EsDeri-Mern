@@ -6,10 +6,10 @@ import Footer from "../components/Footer/Footer";
 const ContactPage = () => {
   return (
     <>
-        <Header />
+    
         <Contact />
         <Policy />
-        <Footer />
+   
     </>
   )
 }
