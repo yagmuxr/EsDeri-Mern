@@ -1,9 +1,9 @@
 
-import CartPage from './pages/CartPage';
+import HomePage from './pages/HomePage';
 function App() {
   return (
     <>
-   <CartPage/>
+   <HomePage/>
     </>
   );
 }
