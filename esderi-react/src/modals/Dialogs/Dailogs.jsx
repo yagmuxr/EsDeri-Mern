@@ -32,7 +32,7 @@ const Dailogs = ({ isDialogShow, setIsDialogShow }) => {
                 />
                 <button className="btn-primary">SUBSCRIBE</button>
                 <label>
-                  <input type="checkbox" />
+                  <input type="checkbox" onChange={handleCloseDialog} />
                   <span>Don't show this popup again</span>
                 </label>
               </form>
