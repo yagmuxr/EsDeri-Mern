@@ -44,9 +44,9 @@ const Dailogs = ({ isDialogShow, setIsDialogShow }) => {
   );
 };
 
-export default Dailogs;
+export default Dialogs;
 
-Dailogs.propTypes = {
+Dialogs.propTypes = {
   isDialogShow: PropTypes.bool,
   setIsDialogShow: PropTypes.func,
 }; 
