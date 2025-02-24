@@ -2,10 +2,10 @@ import PropTypes from "prop-types";
 import "./Dialogs.css";
 
 const Dailogs = ({ isDialogShow, setIsDialogShow }) => {
-  const handleCloseDialog = () => {
-    setIsDialogShow(false);
+  const handleCloseDialog = (event) => {
+    const checked = event.target.checked;
+    localStorage.setItem("dialog", JSON.stringify(!checked))
   };
-
   return (
     <div className={`modal-dialog ${isDialogShow ? "show" : ""}`}>
       <div className="modal-wrapper">
@@ -32,7 +32,7 @@ const Dailogs = ({ isDialogShow, setIsDialogShow }) => {
                 />
                 <button className="btn-primary">SUBSCRIBE</button>
                 <label>
-                  <input type="checkbox" />
+                  <input type="checkbox" onChange={handleCloseDialog} />
                   <span>Don't show this popup again</span>
                 </label>
               </form>
