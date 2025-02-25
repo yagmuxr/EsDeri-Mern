@@ -1,8 +1,8 @@
 import "./ProductDetails.css";
-
-const Reviews = () => {
+import PropTypes from "prop-types";
+const Reviews = ({active}) => {
   return (
-    <div className="tab-panel-reviews content" id="reviews">
+    <div className={`tab-panel-reviews ${active}`}>
       <h3>
         2 reviews for Basic Colored Sweatpants With Elastic Hems
       </h3>
@@ -165,3 +165,6 @@ const Reviews = () => {
 };
 
 export default Reviews;
+Reviews.propTypes = {
+  active: PropTypes.string
+}
