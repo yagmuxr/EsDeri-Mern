@@ -1,10 +1,8 @@
-
-import HomePage from './pages/HomePage';
-import Search from './modals/Search/Search';
+import ProductDetailsPage from './pages/ProductDetailsPage';
 function App() {
   return (
     <>
-   <HomePage/>
+   <ProductDetailsPage/>
     </>
   );
 }

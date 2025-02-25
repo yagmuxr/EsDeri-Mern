@@ -11,24 +11,33 @@ const MainLayout = ({ children }) => {
     const [isDialogShow, setIsDialogShow] = useState(false);
 
     useEffect(() => {
-      const dialogStatus = localStorage.getItem("dialog")
-        ? JSON.parse(localStorage.getItem("dialog"))
-        : localStorage.setItem("dialog", JSON.stringify(true));
-  
-      setTimeout(() => {
-        setIsDialogShow(dialogStatus);
-      }, 2000);
+      // localStorage'dan dialog durumunu al, yoksa true olarak ayarla
+      const dialogStatus = localStorage.getItem("dialog");
+      
+      if (dialogStatus === null) {
+        // İlk ziyarette dialog'u göster
+        localStorage.setItem("dialog", JSON.stringify(true));
+        setTimeout(() => {
+          setIsDialogShow(true);
+        }, 1000);
+      } else {
+        // Sonraki ziyaretlerde localStorage'daki değere göre göster/gizle
+        const shouldShow = JSON.parse(dialogStatus);
+        setTimeout(() => {
+          setIsDialogShow(shouldShow);
+        }, 2000);
+      }
     }, []);
+
     return (
       <div className="main-layout">
         <Dialog isDialogShow={isDialogShow} setIsDialogShow={setIsDialogShow} />
-      <Search isSearchShow={isSearchShow} setIsSearchShow={setIsSearchShow} />
-      <Header setIsSearchShow={setIsSearchShow} />
-      {children}
-      <Footer />
-    </div>
-
-  );
+        <Search isSearchShow={isSearchShow} setIsSearchShow={setIsSearchShow} />
+        <Header setIsSearchShow={setIsSearchShow} />
+        {children}
+        <Footer />
+      </div>
+    );
 };
 
 export default MainLayout;

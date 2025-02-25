@@ -2,10 +2,21 @@ import PropTypes from "prop-types";
 import "./Dialogs.css";
 
 const Dailogs = ({ isDialogShow, setIsDialogShow }) => {
-  const handleCloseDialog = (event) => {
-    const checked = event.target.checked;
-    localStorage.setItem("dialog", JSON.stringify(!checked))
+  const handleCloseDialog = () => {
+    setIsDialogShow(false);
   };
+
+  const handleCheckbox = (event) => {
+    const checked = event.target.checked;
+    if (checked) {
+      // Checkbox işaretlenirse bir daha gösterme
+      localStorage.setItem("dialog", JSON.stringify(false));
+    } else {
+      // Checkbox işaretli değilse sonraki ziyarette göster
+      localStorage.setItem("dialog", JSON.stringify(true));
+    }
+  };
+
   return (
     <div className={`modal-dialog ${isDialogShow ? "show" : ""}`}>
       <div className="modal-wrapper">
@@ -32,7 +43,7 @@ const Dailogs = ({ isDialogShow, setIsDialogShow }) => {
                 />
                 <button className="btn-primary">SUBSCRIBE</button>
                 <label>
-                  <input type="checkbox" onChange={handleCloseDialog} />
+                  <input type="checkbox" onChange={handleCheckbox} />
                   <span>Don't show this popup again</span>
                 </label>
               </form>
@@ -44,9 +55,9 @@ const Dailogs = ({ isDialogShow, setIsDialogShow }) => {
   );
 };
 
-export default Dialogs;
+export default Dailogs;
 
-Dialogs.propTypes = {
+Dailogs.propTypes = {
   isDialogShow: PropTypes.bool,
   setIsDialogShow: PropTypes.func,
 }; 

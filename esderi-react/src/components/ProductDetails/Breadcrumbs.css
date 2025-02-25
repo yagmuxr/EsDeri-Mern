@@ -1,0 +1,48 @@
+.breadcrumb {
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .breadcrumb ul {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .breadcrumb ul li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .breadcrumb ul li:not(:last-child)::after {
+    content: "/";
+    color: #dee0ea;
+  }
+  
+  .breadcrumb ul li a {
+    color: #7a7a7a;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  .breadcrumb ul li a:hover {
+    color: #1367ef;
+  }
+  
+  .breadcrumb ul li.active a {
+    color: #1367ef;
+    font-weight: 500;
+  }
+  
+  @media (max-width: 576px) {
+    .breadcrumb {
+      padding: 10px;
+      margin-bottom: 15px;
+    }
+  }
