@@ -32,21 +32,7 @@ const Header = () => {
                     <li className="menu-list-item">
                       <a href="index.html" className="menu-link active">
                         Home
-                        <i className="bi bi-chevron-down"></i>
                       </a>
-                      <div className="menu-dropdown-wrapper">
-                        <ul className="menu-dropdown-content">
-                          <li><a href="#">Home Clean</a></li>
-                          <li><a href="#">Home Collection</a></li>
-                          <li><a href="#">Home Minimal</a></li>
-                          <li><a href="#">Home Modern</a></li>
-                          <li><a href="#">Home Parallax</a></li>
-                          <li><a href="#">Home Strong</a></li>
-                          <li><a href="#">Home Style</a></li>
-                          <li><a href="#">Home Unique</a></li>
-                          <li><a href="#">Home RTL</a></li>
-                        </ul>
-                      </div>
                     </li>
                     <li className="menu-list-item megamenu-wrapper">
                       <a href="shop.html" className="menu-link">
@@ -101,9 +87,6 @@ const Header = () => {
                           </div>
                         </div>
                       </div>
-                    </li>
-                    <li className="menu-list-item">
-                      <a href="blog.html" className="menu-link">Blog</a>
                     </li>
                     <li className="menu-list-item">
                       <a href="contact.html" className="menu-link">Contact</a>

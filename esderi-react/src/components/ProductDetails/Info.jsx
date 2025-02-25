@@ -73,12 +73,8 @@ const Info = () => {
             </div>
             <div className="product-extra-buttons">
               <a href="#">
-                <i className="bi bi-globe"></i>
-                <span>Size Guide</span>
-              </a>
-              <a href="#">
                 <i className="bi bi-heart"></i>
-                <span>Add to Wislist</span>
+                <span>Add to Wishlist</span>
               </a>
               <a href="#">
                 <i className="bi bi-share"></i>
