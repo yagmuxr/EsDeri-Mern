@@ -4,6 +4,8 @@ import './Products.css';
 import productsData from "../../data.json";
 import PropTypes from "prop-types";
 import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function NextBtn({ onClick }) {
   return (
@@ -31,16 +33,15 @@ PrevBtn.propTypes = {
 
 const Products = () => {
   const [products] = useState(productsData.products);
+  const [cartItems, setCartItems] = useState([]);
+  console.log(cartItems.length)
 
   const sliderSettings = {
     dots: false,
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,
-    nextArrow: <NextBtn />,
-    prevArrow: <PrevBtn />,
-    autoplaySpeed: 3000,
-    autoplay: true,
+    arrows: false,
     responsive: [
       {
         breakpoint: 992,
@@ -59,15 +60,16 @@ const Products = () => {
 
   return (
     <section className="products">
+      Cart Sayısı: {cartItems.length}
       <div className="container">
         <div className="section-title">
           <h2>Featured Products</h2>
           <p>Summer Collection New Morden Design</p>
         </div>
         <div className="product-wrapper product-carousel">
-          <Slider {...sliderSettings}>
+        <Slider {...sliderSettings}>
             {products.map((product) => (
-              <ProductItem product={product} key={product.id} />
+              <ProductItem productItem={product} setCartItems={setCartItems} key={product.id} />
             ))}
           </Slider>
         </div>

@@ -36,54 +36,71 @@
     },
     {
       "id": 3,
-      "name": "Blush Beanie",
+      "name": "Classic Leather Wallet",
       "price": {
-        "oldPrice": 165.00,
-        "newPrice": 138.00
+        "oldPrice": 185.00,
+        "newPrice": 148.00
       },
-      "discount": 12,
+      "discount": 20,
       "img": {
-        "singleImage": "img/products/product3/1.png",
+        "singleImage": "img/products/product1/1.png",
         "thumbs": [
-          "img/products/product3/1.png",
-          "img/products/product3/2.png",
-          "img/products/product3/3.png"
+          "img/products/product1/1.png",
+          "img/products/product1/2.png",
+          "img/products/product1/3.png"
         ]
       }
     },
     {
       "id": 4,
-      "name": "Mercury Tee",
+      "name": "Premium Card Holder",
       "price": {
-        "oldPrice": 165.00,
-        "newPrice": 128.00
+        "oldPrice": 145.00,
+        "newPrice": 116.00
       },
-      "discount": 25,
+      "discount": 15,
       "img": {
-        "singleImage": "img/products/product4/1.png",
+        "singleImage": "img/products/product2/1.png",
         "thumbs": [
-          "img/products/product4/1.png",
-          "img/products/product4/2.png",
-          "img/products/product4/3.png"
+          "img/products/product2/1.png",
+          "img/products/product2/2.png",
+          "img/products/product2/3.png"
         ]
       }
     },
     {
       "id": 5,
-      "name": "La Bohème Rose Gold",
+      "name": "Vintage Leather Belt",
       "price": {
-        "oldPrice": 165.00,
-        "newPrice": 118.00
+        "oldPrice": 195.00,
+        "newPrice": 156.00
       },
-      "discount": 22,
+      "discount": 25,
       "img": {
-        "singleImage": "img/products/product5/1.png",
+        "singleImage": "img/products/product1/1.png",
         "thumbs": [
-          "img/products/product5/1.png",
-          "img/products/product5/2.png",
-          "img/products/product5/3.png"
+          "img/products/product1/1.png",
+          "img/products/product1/2.png",
+          "img/products/product1/3.png"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "name": "Business Card Case",
+      "price": {
+        "oldPrice": 175.00,
+        "newPrice": 140.00
+      },
+      "discount": 18,
+      "img": {
+        "singleImage": "img/products/product2/1.png",
+        "thumbs": [
+          "img/products/product2/1.png",
+          "img/products/product2/2.png",
+          "img/products/product2/3.png"
         ]
       }
     }
   ]
-} 
+}

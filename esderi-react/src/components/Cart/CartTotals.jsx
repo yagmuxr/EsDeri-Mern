@@ -1,3 +1,4 @@
+import "./Cart.css";
 const CartTotals = () => {
     return (
       <div className="cart-totals">
