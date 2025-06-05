@@ -1,13 +1,28 @@
 import './CategoryItem.css';
-const CategoryItem = () => {
-    return (
-        <li class="category-item">
-        <a href="#">
-          <img src="img/categories/categories1.png" alt="" class="category-image"/>
-          <span class="category-title"> Man </span>
-        </a>
-      </li>
-    )
-}
+import PropTypes from "prop-types";
+
+const CategoryItem = ({ category }) => {
+  return (
+    <li className="category-item">
+      <a href="#">
+        {category.img && (
+          <img
+            src={category.img}
+            alt={category.name}
+            className="category-image"
+          />
+        )}
+        <span className="category-title">{category.name}</span>
+      </a>
+    </li>
+  );
+};
+
+CategoryItem.propTypes = {
+  category: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    img: PropTypes.string,
+  }),
+};
 
 export default CategoryItem;

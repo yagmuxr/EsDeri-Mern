@@ -13,7 +13,24 @@
 
 .section-title {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 12px 0;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+.section-title p {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 /* Slider styling */
@@ -119,6 +136,14 @@
   .slick-next {
     right: -15px;
   }
+
+  .section-title h2 {
+    font-size: 26px;
+  }
+  
+  .section-title p {
+    font-size: 14px;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -133,6 +158,46 @@
     width: 35px;
     height: 35px;
   }
+
+  .section-title h2 {
+    font-size: 22px;
+  }
+  
+  .section-title p {
+    font-size: 13px;
+  }
 }
+/* === Ürün fiyatını sola hizala === */
+.product-item-price {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 10px;
+}
+
+.product-item-price .old-price {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 14px;
+}
+
+.product-item-price .new-price {
+  color: red;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* === Adet input'u küçült === */
+.quantity-input {
+  width: 60px;
+  padding: 4px 6px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
 
 /*! products end  */

@@ -1,7 +1,10 @@
 import "./ProductDetails.css";
 import Reviews from "./Reviews";
 import { useState } from "react";
-const Tabs = () => {
+import PropTypes from "prop-types";
+
+const Tabs = ({ singleProduct, setSingleProduct }) => {
+
   const [activeTab, setActiveTab] = useState("desc");
 
   const handleTabClick = (e, tab) => {
@@ -42,25 +45,10 @@ const Tabs = () => {
       </ul>
       <div className="tab-panel">
         <div className={`tab-panel-descriptions content ${activeTab === "desc" ? "active" : ""}`}>
-          <p>
-            Quisque varius diam vel metus mattis, id aliquam diam rhoncus. Proin
-            vitae magna in dui finibus malesuada et at nulla. Morbi elit ex,
-            viverra vitae ante vel, blandit feugiat ligula. Fusce fermentum
-            iaculis nibh, at sodales leo maximus a. Nullam ultricies sodales
-            nunc, in pellentesque lorem mattis quis. Cras imperdiet est in nunc
-            tristique lacinia. Nullam aliquam mauris eu accumsan tincidunt.
-            Suspendisse velit ex, aliquet vel ornare vel, dignissim a tortor.
-          </p>
-          <br />
-          <p>
-            Quisque varius diam vel metus mattis, id aliquam diam rhoncus. Proin
-            vitae magna in dui finibus malesuada et at nulla. Morbi elit ex,
-            viverra vitae ante vel, blandit feugiat ligula. Fusce fermentum
-            iaculis nibh, at sodales leo maximus a. Nullam ultricies sodales
-            nunc, in pellentesque lorem mattis quis. Cras imperdiet est in nunc
-            tristique lacinia. Nullam aliquam mauris eu accumsan tincidunt.
-            Suspendisse velit ex, aliquet vel ornare vel, dignissim a tortor.
-          </p>
+        <div
+            className="product-description"
+            dangerouslySetInnerHTML={{ __html: singleProduct.description }}
+          ></div>
         </div>
         <div className={`tab-panel-information content ${activeTab === "info" ? "active" : ""}`}>
           <h3>Additional information</h3>
@@ -75,19 +63,23 @@ const Tabs = () => {
                   </p>
                 </td>
               </tr>
-              <tr>
-                <th>Size</th>
-                <td>
-                  <p>XXS, XS, S, M, L, XL, XXL</p>
-                </td>
-              </tr>
             </tbody>
           </table>
         </div>
-        <Reviews active={activeTab === "reviews" ? "active" : ""} />
+        {activeTab === "reviews" && (
+          <Reviews 
+            active={activeTab === "reviews" ? "active" : ""} 
+            singleProduct={singleProduct}
+            setSingleProduct={setSingleProduct}
+/>
+        )}
       </div>
     </div>
   );
 };
 
 export default Tabs;
+Tabs.propTypes = {  
+  singleProduct: PropTypes.object,
+  setSingleProduct: PropTypes.func,
+};

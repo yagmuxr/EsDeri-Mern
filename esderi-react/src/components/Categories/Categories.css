@@ -16,17 +16,25 @@
 
 .section-title {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   width: 100%;
 }
 
 .section-title h2 {
-  font-size: 28px;
-  margin-bottom: 10px;
+  font-size: 32px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 12px 0;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
 }
 
 .section-title p {
+  font-size: 16px;
   color: #666;
+  margin: 0;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 .category-list {
@@ -59,12 +67,28 @@
     grid-template-columns: repeat(2, 1fr);
     max-width: 540px;
   }
+  
+  .section-title h2 {
+    font-size: 26px;
+  }
+  
+  .section-title p {
+    font-size: 14px;
+  }
 }
 
 @media screen and (max-width: 576px) {
   .category-list {
     grid-template-columns: 1fr;
     max-width: 100%;
+  }
+  
+  .section-title h2 {
+    font-size: 22px;
+  }
+  
+  .section-title p {
+    font-size: 13px;
   }
 }
  

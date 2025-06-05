@@ -34,10 +34,10 @@ const Footer = () => {
                             <div className="footer-contact-bottom">
                                 <div className="download-app">
                                     <a href="#">
-                                        <img src="img/footer/app-store.png" alt="App Store" />
+                                        <img src="/img/footer/app-store.png" alt="App Store" />
                                     </a>
                                     <a href="#">
-                                        <img src="img/footer/google-play.png" alt="Google Play" />
+                                        <img src="/img/footer/google-play.png" alt="Google Play" />
                                     </a>
                                 </div>
                                 <p className="privacy-text">
@@ -114,11 +114,11 @@ const Footer = () => {
                     <div className="footer-copyright">
                         <div className="site-copyright">
                             <p>
-                                Copyright 2022 © E-Commerce Theme. All right reserved. Powered by Emin Basbayan.
+                                Copyright 2022 © E-Commerce Theme. All right reserved. Powered by Yagmur Yalcin.
                             </p>
                         </div>
                         <a href="#">
-                            <img src="img/footer/cards.png" alt="Payment Methods" />
+                            <img src="/img/footer/cards.png" alt="Payment Methods" />
                         </a>
                         <div className="footer-menu">
                             <ul className="footer-menu-list">

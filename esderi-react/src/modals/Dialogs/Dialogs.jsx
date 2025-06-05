@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import "./Dialogs.css";
 
-const Dailogs = ({ isDialogShow, setIsDialogShow }) => {
+const Dialogs = ({ isDialogShow, setIsDialogShow }) => {
   const handleCloseDialog = () => {
     setIsDialogShow(false);
   };
@@ -25,7 +25,7 @@ const Dailogs = ({ isDialogShow, setIsDialogShow }) => {
         </button>
         <div className="modal-content">
           <div className="modal-image">
-            <img src="img/esderi.jpg" alt="" />
+            <img src="/img/esderi.jpg" alt="" />
           </div>
           <div className="popup-wrapper">
             <div className="popup-content">
@@ -55,9 +55,9 @@ const Dailogs = ({ isDialogShow, setIsDialogShow }) => {
   );
 };
 
-export default Dailogs;
+export default Dialogs;
 
-Dailogs.propTypes = {
+Dialogs.propTypes = {
   isDialogShow: PropTypes.bool,
   setIsDialogShow: PropTypes.func,
 }; 

@@ -87,6 +87,50 @@
   margin-top: 10px;
 }
 
+.colors-and-quantity {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.colors {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.colors-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.quantity-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.quantity-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Ortalanmış Add to Cart butonu */
+.cart-button-centered {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.cart-button-centered .btn {
+  min-width: 200px;
+}
+
+/* Eski cart-button stilini kaldırıyoruz */
 .cart-button {
   display: flex;
   gap: 15px;
@@ -95,11 +139,13 @@
 }
 
 #quantity {
-  width: 120px;
-  padding: 12px;
+  width: 45px;
+  height: 45px;
+  padding: 6px 4px;
   border: 1px solid #dee0ea;
   border-radius: 4px;
-  font-size: 16px;
+  font-size: 13px;
+  text-align: center;
 }
 
 .btn-lg {
@@ -139,6 +185,16 @@
   .site-main .product-gallery,
   .site-main .product-info {
     width: 100%;
+  }
+
+  .colors-and-quantity {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .cart-button-centered .btn {
+    min-width: 150px;
+    font-size: 14px;
   }
 }
 
@@ -222,7 +278,7 @@
 .comment-list {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
 }
 
 .comment-item {
@@ -232,19 +288,51 @@
   background-color: #fff;
 }
 
-.comment-text .comment-star {
+.comment-content {
   display: flex;
-  gap: 3px;
-  color: #dc3545;
-  margin-bottom: 10px;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.comment-avatar {
+  flex-shrink: 0;
+}
+
+.comment-avatar img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #dee0ea;
+}
+
+.comment-details {
+  flex: 1;
 }
 
 .comment-meta {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
   margin-bottom: 10px;
+}
+
+.comment-author {
+  font-weight: 500;
+  color: #333;
+  font-size: 14px;
+}
+
+.comment-date {
   color: #7a7a7a;
+  font-size: 12px;
+}
+
+.comment-text .comment-star {
+  display: flex;
+  gap: 3px;
+  color: #dc3545;
+  margin-bottom: 10px;
 }
 
 /* Review Form */

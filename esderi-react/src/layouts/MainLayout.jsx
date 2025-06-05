@@ -4,7 +4,7 @@ import Header from "../components/Header/Header";
 import Proptypes from "prop-types";
 import { useEffect, useState } from "react";
 import Search from "../modals/Search/Search";
-import Dialog from "../modals/Dialogs/Dailogs";
+import Dialog from "../modals/Dialogs/Dialogs";
 
 const MainLayout = ({ children }) => {
     const [isSearchShow, setIsSearchShow] = useState(false);
