@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 const OrderPage = () => {
   const [orders, setOrders] = useState([]);
-  const apiUrl = "https://esderi-mern.onrender.com";
+    const apiUrl = import.meta.env.VITE_API_BASE_URL;
 
   useEffect(() => {
     const fetchOrders = async () => {

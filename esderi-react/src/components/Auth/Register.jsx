@@ -21,7 +21,8 @@ const Register = () => {
 const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`https://esderi-mern.onrender.com/api/auth/register`, {
+      const apiUrl = import.meta.env.VITE_API_BASE_URL;
+      const response = await fetch(`${apiUrl}/api/auth/register`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

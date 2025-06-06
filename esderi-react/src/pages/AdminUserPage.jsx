@@ -1,7 +1,7 @@
 import { Table, Avatar, Button, Popconfirm, message } from "antd";
 import { useEffect, useState } from "react";
 
-const apiUrl = "https://esderi-mern.onrender.com"; // API URL'ini burada tanımla
+const apiUrl = import.meta.env.VITE_API_BASE_URL;
 
 const AdminUserPage = () => {
   const [users, setUsers] = useState([]);

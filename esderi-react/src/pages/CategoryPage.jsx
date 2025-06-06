@@ -51,7 +51,7 @@ const CategoryPage = () => {
     setLoading(true);
 
     try {
-      const response = await fetch(`https://esderi-mern.onrender.com/api/categories`);
+      const response = await fetch(`${apiUrl}/api/categories`);
 
       if (response.ok) {
         const data = await response.json();
@@ -68,7 +68,7 @@ const CategoryPage = () => {
 
   const deleteCategory = async (categoryId) => {
     try {
-      const response = await fetch(`https://esderi-mern.onrender.com/api/categories/${categoryId}`, {
+      const response = await fetch(`${apiUrl}/api/categories/${categoryId}`, {
         method: "DELETE",
       });
 

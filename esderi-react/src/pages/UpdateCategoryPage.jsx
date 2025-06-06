@@ -2,7 +2,7 @@ import { Button, Form, Input, Spin, message } from "antd";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-const apiUrl = "https://esderi-mern.onrender.com";
+const apiUrl = import.meta.env.VITE_API_BASE_URL;
 
 const UpdateCategoryPage = () => {
   const [loading, setLoading] = useState(false);
