@@ -2,10 +2,10 @@ import './Header.css';
 import { useState, useContext } from 'react';
 import Search from "../../modals/Search/Search";
 import { CartContext } from "../../context/CartProvider";
-import { Link, useLocation } from "react-router-dom";
+import { AuthContext } from "../../context/AuthContext";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 
-const user = localStorage.getItem("user");
 // Güvenli useLocation
 function useSafeLocation() {
   try {
@@ -20,12 +20,21 @@ const Header = ({ setIsSearchShow, setCurrentPage }) => {
   const { pathname } = useSafeLocation();
   const [isSearchShow, setIsSearchShowLocal] = useState(false);
   const { cartItems } = useContext(CartContext);
+  const { user, logout } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const cartItemCount = cartItems.reduce((total, item) => total + (item.quantity || 1), 0);
 
   const handleCartClick = (e) => {
     e.preventDefault();
     setCurrentPage && setCurrentPage('cart');
+  };
+
+  const handleLogout = () => {
+    if (window.confirm("Çıkış yapmak istediğinize emin misiniz?")) {
+      logout();
+      navigate("/");
+    }
   };
 
   return (
@@ -92,42 +101,29 @@ const Header = ({ setIsSearchShow, setCurrentPage }) => {
 
             <div className="header-right">
               <div className="header-right-links">
-                <Link to={"/auth"} className="header-account">
-                  <i className="bi bi-person"></i>
-                </Link>
+                {!user ? (
+                  <Link to={"/auth"} className="header-account">
+                    <i className="bi bi-person"></i>
+                  </Link>
+                ) : (
+                  <button className="search-button" onClick={handleLogout}>
+                    <i className="bi bi-box-arrow-right"></i>
+                  </button>
+                )}
                 <button className="search-button" onClick={() =>
                   setIsSearchShow ? setIsSearchShow(true) : setIsSearchShowLocal(true)
                 }>
                   <i className="bi bi-search"></i>
                 </button>
                 <Link to="/orders" className="header-orders">
-  <i className="bi bi-receipt" title="Siparişlerim"></i>
-</Link>
+                  <i className="bi bi-receipt" title="Siparişlerim"></i>
+                </Link>
                 <div className="header-cart">
                   <Link to={"/cart"} className="header-cart-link">
                     <i className="bi bi-bag"></i>
                     <span className="header-cart-count">{cartItemCount}</span>
                   </Link>
                 </div>
-                {user && (
-                  <button
-                    className="search-button"
-                    onClick={() => {
-                      if (
-                        window.confirm(
-                          "Çıkış yapmak istediğinize emin misiniz?"
-                        )
-                      ) {
-                        {
-                          localStorage.removeItem("user");
-                          window.location.href = "/";
-                        }
-                      }
-                    }}
-                  >
-                    <i className="bi bi-box-arrow-right"></i>
-                  </button>
-                )}
               </div>
             </div>
 
