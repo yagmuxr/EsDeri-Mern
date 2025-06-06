@@ -32,8 +32,8 @@ const Header = ({ setIsSearchShow, setCurrentPage }) => {
 
   const handleLogout = () => {
     if (window.confirm("Çıkış yapmak istediğinize emin misiniz?")) {
-      logout();
-      navigate("/");
+      localStorage.removeItem("user");
+      window.location.reload();
     }
   };
 
