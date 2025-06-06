@@ -1,7 +1,7 @@
 import { Table, Avatar, Button, Popconfirm, message } from "antd";
 import { useEffect, useState } from "react";
 
-const apiUrl = "http://localhost:3000"; // API URL'ini burada tanımla
+const apiUrl = "https://esderi-mern.onrender.com"; // API URL'ini burada tanımla
 
 const AdminUserPage = () => {
   const [users, setUsers] = useState([]);

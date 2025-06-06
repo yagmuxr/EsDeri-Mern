@@ -2,7 +2,7 @@ import { Button, Form, Input, Spin, message } from "antd";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-const apiUrl = "http://localhost:3000";
+const apiUrl = "https://esderi-mern.onrender.com";
 
 const UpdateCategoryPage = () => {
   const [loading, setLoading] = useState(false);

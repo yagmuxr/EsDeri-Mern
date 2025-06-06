@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 const OrderPage = () => {
   const [orders, setOrders] = useState([]);
-  const apiUrl = "http://localhost:3000";
+  const apiUrl = "https://esderi-mern.onrender.com";
 
   useEffect(() => {
     const fetchOrders = async () => {

@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 const Orders = () => {
   const [orders, setOrders] = useState([]);
   const user = JSON.parse(localStorage.getItem("user"));
-  const apiUrl = "http://localhost:3000"; // 🔁 backend API URL
+  const apiUrl = "https://esderi-mern.onrender.com"; // 🔁 backend API URL
 
   useEffect(() => {
     const fetchOrders = async () => {
