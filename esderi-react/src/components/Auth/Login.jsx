@@ -1,7 +1,8 @@
 import "./Auth.css";
 import { message } from "antd";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../../context/AuthContext";
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -9,6 +10,7 @@ const Login = () => {
     password: "",
   });
   const navigate = useNavigate();
+  const { login } = useContext(AuthContext);
   const apiUrl = import.meta.env.VITE_API_BASE_URL;
 
   const handleInputChange = (e) => {
@@ -29,7 +31,7 @@ const Login = () => {
 
       if (response.ok) {
         const data = await response.json();
-        localStorage.setItem("user", JSON.stringify(data));
+        login(data);
         message.success("Giriş başarılı.");
         if (data.role === "admin") {
           navigate("/admin");

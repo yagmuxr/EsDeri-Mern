@@ -1,8 +1,9 @@
 import "./Auth.css";
 
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { message } from "antd";
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../../context/AuthContext";
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -12,6 +13,7 @@ const Register = () => {
   });
 
   const navigate = useNavigate();
+  const { login } = useContext(AuthContext);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -35,7 +37,7 @@ const handleRegister = async (e) => {
         const data = await response.json();
         // const { password, ...rest } = data;
         
-        localStorage.setItem("user", JSON.stringify(data));
+        login(data); // AuthContext'teki login fonksiyonunu çağır
         message.success("Kayıt başarılı.");
         navigate("/");
       } else {
